@@ -18,55 +18,31 @@ Ensure that the configuration values follow the required format to avoid issues 
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Mohammed-Aftab-Siddique/dynatrace-log-parser.git
+   git clone https://github.com/Mohammed-Aftab-Siddique/dynatrace-linux-metric-event-ingest.git
    ```
 2. Navigate to the cloned directory:
    ```bash
-   cd dynatrace-log-parser
+   cd dynatrace-linux-metric-event-ingest
    ```
 3. Ensure that you have the necessary permissions to execute the script:
    ```bash
-   chmod +x log_parser_v1.sh
-   ```
-## Metric Overview
-Metric Name:
- ```bash
-   custom.log.error
-   ```
-Metric Dimensions:
- ```bash
-   host, dir & service
-   ```
-Metric Value:
- ```bash
-   status
+   chmod +x metric-event-ingest.sh
    ```
 ## Security Considerations
-- Be aware of the sensitivity of the log data being processed. Avoid exposing sensitive information in the output files.
+- Be aware of the sensitivity of the data being processed. Avoid exposing sensitive information in the output files.
 - Run the script in a secure environment to prevent unauthorized access to the log files.
 
 ## Troubleshooting
-- **Error: "Log file not found"**: Ensure that the `LOG_FILE` path is correct.
 - **Permission Denied**: Check that the script has appropriate execution permissions.
 
 ## Examples
 To run the parser on a log file, use the following command:
 ```bash
-./log_parser_v1.sh
+./metric-event-ingest.sh
 ```
 
 This command will process the specified log file and ingest an output to dynatrace.
 
-## Sample Output
-<img width="1944" height="1076" alt="image" src="https://github.com/user-attachments/assets/b4b49dac-f942-44e6-9aec-01cf1c70aed4" />
-
-# Version History
-
-# log_parser_v2
-- Updated the logic to fetch the latest log file.
-  - Added a check to use `ls` if the file count is less than `ARG_MAX` otherwise use `find`.
-  - This avoids the failure due to `Too Many Arguments`.
-
-## log_parser_v1
+## metric-event-ingest [v1]
 - Initial Release
 
