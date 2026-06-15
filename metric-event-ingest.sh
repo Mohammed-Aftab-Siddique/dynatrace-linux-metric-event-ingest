@@ -60,7 +60,7 @@ curl 'https://<DNS>/e/<Env-ID>/api/v2/settings/objects/<Object-ID>' \
 "title":"<Title>",
 "description":"<Description>",
 "eventType":"CUSTOM_ALERT",
-"davisMerge":true,
+"davisMerge":false,
 "metadata":[<Metadata (if any)>]
 },
 "eventEntityDimensionKey":null,
